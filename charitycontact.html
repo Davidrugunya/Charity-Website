@@ -1,0 +1,159 @@
+<html>
+	<head>
+		<title>Mars Foundation</title>
+		<meta charset = "UTF-8">
+		<meta name = "description" content = "photography website">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name = "view port" content = "width = device-width,initial-scale = 1">
+		<link href="charitycontact.css" type="text/css" rel="stylesheet"/>
+		
+	</head>
+	<body>
+		<div id="showcase">
+			<header>
+				<a class="name" href="charity.html">Mars <br/>Foundation</a>
+				<button  class="menubtn">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</button>
+				<nav class="navbar">
+					<ul class="menu-list">
+						<a class="link" href = "charitywork.html" >
+							<li>Our Work</li>
+						</a>
+						<a class="link" href = "charityabout.html" >
+							<li>About Us</li>
+						</a>
+						<a class="link" href = "charitycontact.html" >
+							<li>Contact Us</li>
+						</a>
+					</ul>
+				</nav>
+				<a href = "charityabout.html#">
+					<button class="learn">DONATE</button>
+				</a>
+			</header>
+			
+			<article class="story">
+				<section id="volunteer" class="floating">
+					<div class="overlay">
+						<div class="divider"></div>
+						<h1>We Love Our Volunteers!</h1>
+						<br/>
+						<h2>Join our global community of volunteers.</h2>
+						<div class="divider"></div>
+						<a>
+							<button  onclick="drop('volunteer')" class="learn">Join Us</button>
+						</a>
+						<div class="divider"></div>
+						<h1>Volunteer In Your Location.</h1>
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt magni nam nisi quae vitae? Quod molestiae ipsa
+						autem natus eum vel ducimus nulla harum voluptatem eligendi! Unde, reiciendis? Praesentium, laborum.</p>
+					</div>
+				</section>
+				
+				<section id="donate">
+					<div class="overlay">
+						<div class="divider"></div>
+						<h1>DONATE</h1>
+						<br/>
+						<h2>100% of your money goes to someone in need!</h2>
+						<div class="divider"></div>
+						<a>
+							<button  onclick="drop('donate')" class="learn">Join Us</button>
+						</a>
+						<div class="divider"></div>
+						<h1>Whatever you give matters.</h1>
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt magni nam nisi quae vitae? Quod molestiae ipsa
+						autem natus eum vel ducimus nulla harum voluptatem eligendi! Unde, reiciendis? Praesentium, laborum.</p>
+					</div>
+				</section>
+			</article>
+			
+			<article id="contact-form">
+				<div class="imgsection" id="imgtext1">
+					<div class="overlay">
+						<section class="floating">
+						<div class="divider"></div>
+							<h1>WRITE TO US</h1>
+							<br/>
+							<h3>Your Name :</h3><input class="form" id="firstname" type = "text" required>
+							<h3>Email Address :</h3><input class="form" id="email" type = "email" required>
+							<h3>Message :</h3>
+							<textarea ></textarea><br/>
+							<button class="click">SEND MESSAGE</button>
+						</section>
+					</div>
+				</div>
+			</article>
+			
+			<div class="divider"></div>
+			<article>
+				<h1>CONTACT INFO</h1>
+					<br/>
+					<h3>MY EMAIL</h3>
+					<h4>marsfoundation@gmail.com</h4>
+					<h3>CALL ME</h3>
+					<h4>310-743-3190</h4>
+					<!--links to social media-->
+					<span id = "links">
+						<a href="https://m.facebook.com/home.php?">
+							<button>
+								<img src = "images/facebook.png"/>
+							</button>
+						</a>
+						<a href="https://www.twitter.com/">
+							<button>
+								<img src = "images/twitter.png"/>
+							</button>
+						</a>
+						<a href="https://www.instagram.com">
+							<button>
+								<img src = "images/instagram.png"/>
+							</button>
+						</a>
+						<a href="https://www.youtube.com">
+							<button>
+								<img src = "images/youtube.png"/>
+							</button>
+						</a>
+					</span>
+				
+			</article>
+			<div class="divider"></div>
+			<footer>
+				<!--copyright,trademark and location-->
+				<p>Address  |  myemail@gmail.com  <br/> &copy 2019 Mars Foundation<p>
+			</footer>
+			
+		</div>
+	</body>
+
+</html>
+<script>
+	const btn=document.querySelector('.menubtn')
+	const links=document.querySelector('.menu-list')
+	
+	btn.addEventListener('click',function() {
+		let value = links.classList.contains('navbar_collapse')
+		
+		if (value){links.classList.remove('navbar_collapse')
+				   btn.classList.remove('change')
+		}
+		else{links.classList.add('navbar_collapse')
+			 btn.classList.add('change')
+		}
+		})
+	var i=0;
+	function drop(name){
+		
+		if (i!=0){
+			document.getElementById(name).style.height="50%";
+			i=0;
+			}
+		else{document.getElementById(name).style.height="100%";
+			 i++;}
+		}
+	
+</script>
