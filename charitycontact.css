@@ -139,19 +139,24 @@ section p{
 	padding:0em;
 	text-align:left !important;
 }
+
 .learn{
-	background:#2ca72c;
+	background:#0f89f0;
 	font:normal 18px tahoma;
 	color:white;
-	padding:0.4em;
-	border:solid 1px #2ca72c;
+	padding:0.4em 1em;
+	margin:0.5em;
+	border:solid 1px #0f89f0;
 	border-radius:22px;
 	text-shadow:-1px 1px 2px #333;
 	cursor:pointer;
 }
 .learn:hover{
-	background:#0f89f0 !important;
+	background:black !important;
 	color:white;
+}
+.learn:active{
+	border:solid 1px red;
 }
 
 
@@ -359,24 +364,19 @@ footer a:hover{
 	header .learn{
 		margin:0.5em 25%;
 	}
-	.name{
-		color:#333;
-		text-shadow:none;
-	}
+	
 	header{
 		display:block;
-		background:white;
 		position:fixed;
 		width:100%;
 		padding:0.1em 0.2em;
 		margin-bottom:0px;
-		border-bottom:solid 1px black;
 		z-index:3;
 	}
 	.menubtn{
 		display:block;
 		float:right;
-		margin:0px;
+		margin:3px;
 		background:white;
 		border:solid 1px transparent;
 		border-radius:5px;
@@ -396,7 +396,6 @@ footer a:hover{
 	.menu-list{
 		display:block;
 		float:right;
-		background:rgba(230,230,230,0.3);
 		width:100%;
 		height:0;
 		margin:0;

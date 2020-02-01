@@ -14,7 +14,7 @@ body{
 
 .floating{float:left;}
 .overlay{
-	background:rgb(0,0,0,0.3);
+	background:linear-gradient(90deg,#000000b3,transparent);
 	height:100%;
 }
 .divider{
@@ -33,6 +33,7 @@ body{
 	font:bold 25px trebuchet ms !important;
 	color:gold;
 	text-decoration:none;
+	text-shadow:-1px 1px 2px black;
 	cursor:pointer;
 	border:none;
 }
@@ -44,10 +45,11 @@ header{
 	justify-content:space-between;/*flex-end*/
 	color:white;
 	padding:0.5em;
-	background:transparent;
+	background:#1d1c1c;
     position:relative;
 	text-align:left;
 	text-shadow:-1px 1px 2px black;
+	border-bottom:solid 1px white;
 }
 
 .menu-list{
@@ -80,7 +82,7 @@ header{
 	color:gold;
 }
 #showcase{
-	background:url('images/business-women.jpg')center no-repeat;
+	background:url('images/boat.jpg')center no-repeat;
 	background-size:cover;
 	width:100%;
 	height:70%;
@@ -104,13 +106,12 @@ header{
 }
 
 h1{
-	font-size:32px;
-	color:gold;}
+	font-size:31px;}
 h2{
-	font-size:28px;}
+	font-size:28px;
+	color:black;}
 h3{
-	font-size:23px;
-	color:black;
+	font-size:24px;
 }
 h4{
 	font:normal 21px tahoma;
@@ -194,18 +195,20 @@ article li{
 	cursor:pointer;
 }
 
+
 .learn{
-	background:#2ca72c;
+	background:#0f89f0;
 	font:normal 18px tahoma;
 	color:white;
-	padding:0.4em;
-	border:solid 1px #2ca72c;
+	padding:0.4em 1em;
+	margin:0.5em;
+	border:solid 1px #0f89f0;
 	border-radius:22px;
 	text-shadow:-1px 1px 2px #333;
 	cursor:pointer;
 }
 .learn:hover{
-	background:#0f89f0 !important;
+	background:black !important;
 	color:white;
 }
 .learn:active{
@@ -254,6 +257,8 @@ article li{
 	text-shadow:-1px 1px 2px black;
 	transition:all 1s ease;
 }
+.story h1{color:gold;}
+.story h2{color:white;}
 #james{
 	background:url('images/businessman.jpg')center no-repeat;
 	background-size:cover;
@@ -349,44 +354,34 @@ footer a:hover{
 	color: red;
 }
 
+footer .link{
+	color:white;
+}
 
-@media screen and (max-width:620px){
+@media screen and (max-width:780px){
 	.navbar_collapse{height:200px !important;}
 	.btn_top{
 		left:85%;
 	}
-	#showcase p{margin:1em;}
-	#showcase{
-		height:85%;
+	.divider{
+		height:3em !important;
 	}
-	#showcase span{
-		width:100%;
-	}
-	@keyframes heading{
-		0% {top: 500px;opacity: 0}
-		100% {top: 320px;opacity: 1}
-	}
+	
 	header .learn{
-		margin:0.5em 15%;
-	}
-	.name{
-		color:#333;
-		text-shadow:none;
+		margin:0.5em 20%;
 	}
 	header{
 		display:block;
-		background:white;
 		position:fixed;
 		width:100%;
 		padding:0.1em 0.2em;
 		margin-bottom:0px;
-		border-bottom:solid 1px black;
 		z-index:3;
 	}
 	.menubtn{
 		display:block;
 		float:right;
-		margin:0px;
+		margin:3px;
 		background:white;
 		border:solid 1px transparent;
 		border-radius:5px;
@@ -406,7 +401,6 @@ footer a:hover{
 	.menu-list{
 		display:block;
 		float:right;
-		background:rgba(230,230,230,0.3);
 		width:100%;
 		height:0;
 		margin:0;
@@ -438,16 +432,12 @@ footer a:hover{
 		z-index:3;
 	}
 	
-	.imgsection section{
-		position:relative;
-		width:95% !important;
-	}
 	main{
 		width:100%;
 		padding-top:4em;
 	}
 	article{
-		margin:0.1em;
+		margin:0em;
 		padding:0em;
 	}
 	article img{
@@ -456,7 +446,7 @@ footer a:hover{
 	}
 	
 	article section{
-		width:98% !important;
+		width:98%;
 	}
 	article p{
 		padding:0.1em;
@@ -464,9 +454,13 @@ footer a:hover{
 	section p{
 		padding:0.3em;
 	}
-	
+	article aside{
+		width:98%;
+		display:block;
+	}
 	article video{
-		width:95% !important;
+		width:98% !important;
+		margin:0.1em 0;
 	}
 	.imggallery img{
 		width:98%;

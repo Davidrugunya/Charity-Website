@@ -14,7 +14,7 @@ body{
 
 .floating{float:left;}
 .overlay{
-	background:#2f2e2e99;
+	background:linear-gradient(90deg,#000000b3,transparent);
 	height:100%;
 }
 .divider{
@@ -45,10 +45,11 @@ header{
 	justify-content:space-between;/*flex-end*/
 	color:white;
 	padding:0.5em;
-	background:transparent;
+	background:#1d1c1c;
     position:relative;
 	text-align:left;
 	text-shadow:-1px 1px 2px black;
+	border-bottom:solid 1px white;
 }
 
 .menu-list{
@@ -81,18 +82,14 @@ header{
 	color:gold;
 }
 #showcase{
-	background:url('images/workplace.jpg')center no-repeat;
+	background:url('images/british street.jpg')center no-repeat;
 	background-size:cover;
 	width:100%;
-	height:80%;
+	height:70%;
 	color:white;
 	overflow:hidden;
 }
 #showcase span{
-	float:right;
-	width:38%;
-	margin-left:2em;
-	text-align:left;
 	text-shadow:-1px 1px 2px black;
 	position: relative;
 	animation: heading;
@@ -102,18 +99,17 @@ header{
 
 @keyframes heading{
 	0% {top: 500px;opacity: 0}
-	100% {top: 100px;opacity: 1}
+	100% {top: 150px;opacity: 1}
 }
 
 
 h1{
-	font-size:32px;
-	color:gold;}
+	font-size:32px;}
 h2{
-	font-size:29px;}
+	font-size:28px;
+	color:black;}
 h3{
-	font-size:23px;
-	color:black;
+	font-size:24px;
 }
 h4{
 	font:normal 21px tahoma;
@@ -185,18 +181,21 @@ section p{
 	padding:0.5em;
 	text-align:left !important;
 }
+
+
 .learn{
-	background:#2ca72c;
+	background:#0f89f0;
 	font:normal 18px tahoma;
 	color:white;
-	padding:0.4em;
-	border:solid 1px #2ca72c;
+	padding:0.4em 1em;
+	margin:0.5em;
+	border:solid 1px #0f89f0;
 	border-radius:22px;
 	text-shadow:-1px 1px 2px #333;
 	cursor:pointer;
 }
 .learn:hover{
-	background:#0f89f0 !important;
+	background:black !important;
 	color:white;
 }
 .learn:active{
@@ -275,6 +274,7 @@ section p{
 .story .more{
 	margin-top:12%;
 }
+.story h1{color:gold;}
 #safeguards{
 	background:url('images/tree.jpg')center no-repeat;
 	background-size:cover;
@@ -372,45 +372,34 @@ footer a{
 footer a:hover{
 	color: red;
 }
+footer .link{
+	color:white;
+}
 
-@media screen and (max-width:620px){
+@media screen and (max-width:780px){
 	.navbar_collapse{height:200px !important;}
 	.btn_top{
 		left:85%;
 	}
+	.divider{
+		height:3em !important;
+	}
 	
-	#showcase{
-		height:95%;
-	}
-	#showcase span{
-		width:100%;
-		padding:0.5em;
-	}
-	@keyframes heading{
-		0% {top: 500px;opacity: 0}
-		100% {top: 300px;opacity: 1}
-	}
 	header .learn{
-		margin:0.5em 15%;
-	}
-	.name{
-		color:#333;
-		text-shadow:none;
+		margin:0.5em 20%;
 	}
 	header{
 		display:block;
-		background:white;
 		position:fixed;
 		width:100%;
 		padding:0.1em 0.2em;
 		margin-bottom:0px;
-		border-bottom:solid 1px black;
 		z-index:3;
 	}
 	.menubtn{
 		display:block;
 		float:right;
-		margin:0px;
+		margin:3px;
 		background:white;
 		border:solid 1px transparent;
 		border-radius:5px;
@@ -430,7 +419,6 @@ footer a:hover{
 	.menu-list{
 		display:block;
 		float:right;
-		background:rgba(230,230,230,0.3);
 		width:100%;
 		height:0;
 		margin:0;
@@ -467,7 +455,7 @@ footer a:hover{
 		padding-top:4em;
 	}
 	article{
-		margin:0.1em;
+		margin:0em;
 		padding:0em;
 	}
 	article img{
