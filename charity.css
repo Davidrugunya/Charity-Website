@@ -26,17 +26,7 @@ body{
 	height:60px;
 	margin-right:auto;
 }
-.name{
-	float:left;
-	text-align:center;
-	position:relative;
-	font:bold 25px trebuchet ms !important;
-	color:gold;
-	text-decoration:none;
-	text-shadow:-1px 1px 2px black;
-	cursor:pointer;
-	border:none;
-}
+
 .menubtn{
 	display:none;
 }
@@ -49,7 +39,10 @@ header{
     position:relative;
 	text-align:left;
 	text-shadow:-1px 1px 2px black;
-	border-bottom:solid 1px white;
+	position:fixed;
+	width:100%;
+	transition:top 0.3s;
+	z-index:5;
 }
 
 .menu-list{
@@ -89,11 +82,10 @@ header{
 }
 
 h1{
-	font-size:31px;
+	font-size:33px;
 	color:gold;}
 h2{
-	font-size:29px;
-	color:black;}
+	font:bold 30px tahoma;}
 h3{
 	font-size:24px;
 }
@@ -102,9 +94,8 @@ h4{
 	color:#085598;
 }
 h5{ 
-	font-size:15px;
-	margin:0.2em;
-	color:#1773c2;
+	font:normal 17px arial;
+	margin:0.1em;
 }
 
 .btn_top{
@@ -155,6 +146,7 @@ section{
 }
 article p{
 	padding:1em 7em;
+	text-align:left;
 }
 section p{
 	display:block;
@@ -181,7 +173,25 @@ section p{
 .learn:active{
 	border:solid 1px red;
 }
-
+.extend{
+	display:none;
+}
+.more{
+	background:white;
+	color:#1773c2;
+	padding:0.1em;
+	border:none;
+	cursor:pointer;
+	text-decoration:none;
+	font:normal 15px cursive;
+}
+.more:hover{
+	background:#333 !important;
+	color:white;
+}
+.more:active{
+	border:solid 1px #e60e53;
+}
 
 .X{
 	background:#993e33;
@@ -220,22 +230,41 @@ section p{
 
 .imgsection{
 	background-size:cover;
-	color:#f3f3f3;
-	height:70%;
-	margin:0.5em 0;
-	padding:0;
-	text-shadow:-1px 1px 2px #333;
-	overflow:hidden;
-}
-.imgsection section{
-	float:left;
-	width:40% !important;
-	height:100%;
-	padding:0;
-	margin:0;
-	text-align:center;
+	height:540px !important;
+	color:white;
+	padding:0em;
+	margin:2em 0;
+	line-height:1.2;
 }
 
+.imgsection section{
+	width:40%;
+	float:left;
+	position:relative;
+	top:20px;
+	border:none;
+}
+.imgsection .more{
+	color:#333;
+	background:yellow;
+	font:normal 20px arial;
+	padding:0.5em;
+	border-radius:3px;
+	border:solid 1px yellow;
+	text-shadow:none;
+}
+.imgsection .more:hover{
+	color:white !important;
+}
+.imgsection h1{
+	text-align:center;
+	font-size:33px;
+}
+.imgsection h2{
+	text-align:center;
+	font-size:39px;
+	color:white;
+}
 .imgsection .overlay{
 	background:linear-gradient(90deg,#000000b3,transparent);
 	
@@ -250,6 +279,7 @@ section p{
 }
 #imgtext0 section{
 	padding-top:3em;
+	text-align:center !important;
 }
 #imgtext1{
 	background:url('images/lioness.jpg')center no-repeat;
@@ -265,9 +295,6 @@ section p{
 #imgtext2{
 	background:url('images/corn field.jpg')center no-repeat;
 	background-size:cover;
-}
-#imgtext2 section{
-	padding-top:3em;
 }
 
 .gallery{
@@ -288,7 +315,7 @@ section p{
 	   padding:0px;
 	   position:relative;
 	   align-self:center;
-	   margin:0px;}
+	   margin:0.5em;}
 #social a{
 	text-decoration:none;
 	padding:0px !important;
@@ -326,7 +353,7 @@ footer{
 	z-index:3;
 }
 footer p{
-	font:normal 15px arial;
+	font:normal 15px tahoma;
 	color:#cdd8d6;
 	line-height:1.6;
 	padding:0.3em;
@@ -354,8 +381,21 @@ footer .link:hover{
 	color: red;
 }
 
+#trademark{
+	width:100%;
+	background:#253136 !important;
+	line-height:1.6;
+	padding:0.1em;
+	margin-top:1em;
+	color:#cdd8d6 !important;
+}
+#trademark h5{
+	color:#cdd8d6 !important;
+	font:normal 15px tahoma;
+}
+
 @media screen and (max-width:780px){
-	.navbar_collapse{height:200px !important;}
+	.navbar_collapse{height:220px !important;}
 	.btn_top{
 		left:85%;
 	}
@@ -364,7 +404,7 @@ footer .link:hover{
 	}
 	
 	header .learn{
-		margin:0.5em 20%;
+		display:none;
 	}
 	header{
 		display:block;
@@ -372,13 +412,13 @@ footer .link:hover{
 		width:100%;
 		padding:0.1em 0.2em;
 		margin-bottom:0px;
-		z-index:3;
+		z-index:5;
 	}
 	.menubtn{
 		display:block;
 		float:right;
 		margin:3px;
-		background:white;
+		background:transparent;
 		border:solid 1px transparent;
 		border-radius:5px;
 		cursor:pointer;
@@ -387,57 +427,57 @@ footer .link:hover{
 		width:30px;
 		height:5px;
 		margin:0.5rem;
-		background:rgba(0,136,169,1);
+		background:white;
 		transition:all 0.5s ease;
 	}
 	.change .bar1{transform:rotate(-45deg) translate(-10px,10px)}
 	.change .bar2{opacity:0;}
 	.change .bar3{transform:rotate(45deg) translate(-8px,-8px)}
-	
+		
 	.menu-list{
 		display:block;
 		float:right;
 		width:100%;
 		height:0;
 		margin:0;
-		border-radius:6px;
+		padding:0;
 		overflow:hidden;
-		list-style-type:none;
 		transition:all 0.5s ease;
+		list-style-type:none;
 		z-index:3;
 	}
 	.menu-list li{
 		display:block;
 		padding:0;
 		margin:0;
-	    background:#333;
-	    border-radius:0px;
-	    padding:12px;
-	    margin:0px;
-		transition:all 1s ease;
-	}
-	.link:hover{
-		color:gold;
+		background:#05474d;
+		border-radius:0px;
+		padding:16px;
+		margin:0px;
 	}
 	.link{
-		font-size:20px !important;
+		font:normal 20px tahoma !important;
 		color:white;
-	    text-shadow:-1px 1px 2px #333;
+		text-shadow:-1px 1px 2px #333;
 		cursor:pointer;
 		text-decoration:none;
 		z-index:3;
 	}
-	
 	.imgsection section{
 		float:right;
 		position:relative;
+		text-align:left;
 		width:95% !important;
-		padding-top:30%;
+		top:65%;
 	}
 	.imgsection .overlay{
 		background:linear-gradient(180deg,#000000b3,transparent);
 		
-	}	
+	}
+	.imgsection h1{
+		text-align:left;
+		font-size:33px;
+	}
 	.imgsection p{
 		padding:0em;
 	}
@@ -458,10 +498,10 @@ footer .link:hover{
 		width:98% !important;
 	}
 	article p{
-		padding:0.1em;
+		padding:1em;
 	}
 	section p{
-		padding:0.3em;
+		padding:0.7em;
 	}
 	
 	article video{
@@ -469,14 +509,15 @@ footer .link:hover{
 		margin:0.1em 0;
 	}
 	
-	#imgtext0 section{
-		padding-top:35%;
+	#imgtext0 section,#imgtext0 h1{
+		top:50%;
+		text-align:center !important;
 	}
 	#imgtext1 .overlay{
 		background:linear-gradient(0deg,#000000b3,transparent);
 	}
 	#imgtext2 section{
-		padding-top:35% !important;
+		top:0% !important;
 	}
 
 	#give{
@@ -500,11 +541,8 @@ footer .link:hover{
 @media screen and (max-width:500px){
 	
 	header .learn{
-		margin:0.5em 15%;
 		font-size:18px;
 		background:#0f89f0;
-		border:solid 1px #0f89f0;
+		border:solid 0px #0f89f0;
 	}
-	.navbar_collapse{height:200px !important;}
-	
 }

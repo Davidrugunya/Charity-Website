@@ -11,8 +11,8 @@
 	<body>
 		<div id="showcase">
 			<div class="overlay">
-				<header>
-					<a class="name" href="charity.html">Mars <br/>Foundation</a>
+				<header id="navbar">
+				<a class="name" href="charity.html"><img src = "images/unity-lines white.png"/></a>
 					<button  class="menubtn">
 						<div class="bar1"></div>
 						<div class="bar2"></div>
@@ -60,18 +60,25 @@
 				<section class="floating">
 					
 					<h2>OUR APPROACH</h2>
+					
 					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt magni nam nisi quae vitae? Quod molestiae ipsa
-					autem natus eum vel ducimus nulla harum voluptatem eligendi! Unde, reiciendis? Praesentium, laborum.
-					<br/>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt magni nam nisi quae vitae? Quod molestiae ipsa
-					autem natus eum vel ducimus nulla harum voluptatem eligendi! Unde, reiciendis? Praesentium, laborum.</p>
+					autem natus eum vel ducimus nulla harum voluptatem eligendi!
+					<a class="more" onclick="drop('one')"> ...More</a>
+					</p>
+					<p class="extend" id="one"> Unde, reiciendis? Praesentium, laborum.This is just dummy text to fill the space.It does not do anything, it does not say anything.It just fills up space.This is just dummy text to fill the space.It does not do anything, it does not say anything.It just fills up space.
+					<a class="more" onclick="drop('one')"> ...Less</a>
+					</p>
 				</section>
 				<section>
 					
 					<h2>OUR SOLUTIONS</h2>
 					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt magni nam nisi quae vitae? Quod molestiae ipsa
-					autem natus eum vel ducimus nulla harum voluptatem eligendi! Unde, reiciendis? Praesentium, laborum.
-					<br/>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt magni nam nisi quae vitae? Quod molestiae ipsa
-					autem natus eum vel ducimus nulla harum voluptatem eligendi! Unde, reiciendis? Praesentium, laborum.</p>
+					autem natus eum vel ducimus nulla harum voluptatem eligendi!
+					<a class="more" onclick="drop('two')"> ...More</a>
+					</p>
+					<p class="extend" id="two"> Unde, reiciendis? Praesentium, laborum.This is just dummy text to fill the space.It does not do anything, it does not say anything.It just fills up space.This is just dummy text to fill the space.It does not do anything, it does not say anything.It just fills up space.
+					<a class="more" onclick="drop('two')"> ...Less</a>
+					</p>
 				</section>
 			</article>
 			
@@ -125,18 +132,24 @@
 					<br/>
 					<h2>THE NEXT STEP</h2>
 					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt magni nam nisi quae vitae? Quod molestiae ipsa
-					autem natus eum vel ducimus nulla harum voluptatem eligendi! Unde, reiciendis? Praesentium, laborum.
-					<br/>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt magni nam nisi quae vitae? Quod molestiae ipsa
-					autem natus eum vel ducimus nulla harum voluptatem eligendi! Unde, reiciendis? Praesentium, laborum.</p>
+					autem natus eum vel ducimus nulla harum voluptatem eligendi!
+					<a class="more" onclick="drop('three')"> ...More</a>
+					</p>
+					<p class="extend" id="three"> Unde, reiciendis? Praesentium, laborum.This is just dummy text to fill the space.It does not do anything, it does not say anything.It just fills up space.This is just dummy text to fill the space.It does not do anything, it does not say anything.It just fills up space.
+					<a class="more" onclick="drop('three')"> ...Less</a>
+					</p>
 				</section>
 				
 				<section>
 					<br/>
 					<h2>WHY IT MATTERS</h2>
 					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt magni nam nisi quae vitae? Quod molestiae ipsa
-					autem natus eum vel ducimus nulla harum voluptatem eligendi! Unde, reiciendis? Praesentium, laborum.
-					<br/>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt magni nam nisi quae vitae? Quod molestiae ipsa
-					autem natus eum vel ducimus nulla harum voluptatem eligendi! Unde, reiciendis? Praesentium, laborum.</p>
+					autem natus eum vel ducimus nulla harum voluptatem eligendi!
+					<a class="more" onclick="drop('four')"> ...More</a>
+					</p>
+					<p class="extend" id="four"> Unde, reiciendis? Praesentium, laborum.This is just dummy text to fill the space.It does not do anything, it does not say anything.It just fills up space.This is just dummy text to fill the space.It does not do anything, it does not say anything.It just fills up space.
+					<a class="more" onclick="drop('four')"> ...Less</a>
+					</p>
 				</section>
 			
 				<div class="divider"></div>
@@ -165,13 +178,12 @@
 				<h2>STORIES FROM THE FIELD</h2>
 				<section id="james">
 					<div class="overlay">
-						<div class="divider"></div>
 						<h1>James Kamau</h1>
 						<br/>
-						<h2>I build schools for children in remote villages!</h2>
-						<div class="divider"></div>
+						<h3>I build schools for children in remote villages!</h3>
+						<div class="spacer"></div>
 						<a>
-							<button  onclick="drop('james')" class="learn">Read this Story</button>
+							<button  onclick="show('james')" class="learn">Read this Story</button>
 						</a>
 						<div class="divider"></div>
 						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt magni nam nisi quae vitae? Quod molestiae ipsa
@@ -182,13 +194,12 @@
 				</section>
 				<section id="mary">
 					<div class="overlay">
-						<div class="divider"></div>
 						<h1>Mary Wanjiku</h1>
 						<br/>
-						<h2>I teach people how to create gardens in urban areas!</h2>
-						<div class="divider"></div>
+						<h3>I teach people how to plant gardens in urban areas!</h3>
+						<div class="spacer"></div>
 						<a>
-							<button  onclick="drop('mary')" class="learn">Read this Story</button>
+							<button  onclick="show('mary')" class="learn">Read this Story</button>
 						</a>
 						<div class="divider"></div>
 						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt magni nam nisi quae vitae? Quod molestiae ipsa
@@ -247,44 +258,47 @@
 			</li>
 		</ul>
 			<!--links to social media-->
-		<div id = "social">
-			<a href="https://m.facebook.com/home.php?">
-				<button>
-					<img src = "images/facebook-2.png"/>
-				</button>
-			</a>
-			<a href="https://www.twitter.com/">
-				<button>
-					<img src = "images/twitter-2.png"/>
-				</button>
-			</a>
-			<a href="https://www.instagram.com">
-				<button>
-					<img src = "images/instagram-2.png"/>
-				</button>
-			</a>
-			<a href="https://www.youtube.com">
-				<button>
-					<img src = "images/youtube-2.png"/>
-				</button>
-			</a>
-		</div>
+		
+			<div id = "social">
+				<a href="https://m.facebook.com/home.php?">
+					<button>
+						<img src = "images/facebook-gray.png"/>
+					</button>
+				</a>
+				<a href="https://www.twitter.com/">
+					<button>
+						<img src = "images/twitter-gray.png"/>
+					</button>
+				</a>
+				<a href="https://www.instagram.com">
+					<button>
+						<img src = "images/instagram-gray.png"/>
+					</button>
+				</a>
+				<a href="https://www.youtube.com">
+					<button>
+						<img src = "images/youtube-gray circle.png"/>
+					</button>
+				</a>
+			</div>
 		<ul>
 			<a class="link" href = "charity.html" >
 				<li>Home</li>
 			</a>
 			<a class="link" href = "charitywork.html" >
-				<li>Our Work</li>
+				<li>Work</li>
 			</a>
 			<a class="link" href = "charityabout.html" >
-				<li>About Us</li>
+				<li>About</li>
 			</a>
 			<a class="link" href = "charitycontact.html" >
-				<li>Contact Us</li>
+				<li>Contact</li>
 			</a>
 		</ul>
-		<!--copyright,trademark and location-->
-		<p>Address  |  myemail@gmail.com  <br/> &copy 2019 Mars Foundation<p>
+		<div id="trademark">
+			<h5>BUILDING A BETTER FUTURE</h5>
+			<p> &copy 2019 MARS FOUNDATION | ALL  RIGHTS RESERVED<p>
+		</div>
 	</footer>
 </html>
 <script>
@@ -305,11 +319,21 @@
 	function drop(name){
 		
 		if (i!=0){
-			document.getElementById(name).style.height="50%";
+			document.getElementById(name).style.display="none";
 			i=0;
 			}
-		else{document.getElementById(name).style.height="100%";
+		else{document.getElementById(name).style.display="block";
 			 i++;}
+		}
+	var y=0;
+	function show(name){
+		
+		if (y!=0){
+			document.getElementById(name).style.height="60%";
+			y=0;
+			}
+		else{document.getElementById(name).style.height="100%";
+			 y++;}
 		}
 	
 	var x=0;
@@ -322,4 +346,16 @@
 		else{document.getElementById(show).style.display="block";
 			 x++;}
 		}
+	
+	var prevScrollpos = window.pageYOffset;
+	window.onscroll = function() {
+		var currentScrollpos =	window.pageYOffset;
+		if (prevScrollpos >	currentScrollpos) {
+	document.getElementById("navbar").style.top = "0";
+	document.getElementById("navbar").style.background = "#1d1c1c";
+	} else{
+	document.getElementById("navbar").style.top = "-4.8em";
+	}
+	prevScrollpos = currentScrollpos;
+	}
 </script>

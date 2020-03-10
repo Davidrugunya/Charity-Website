@@ -10,8 +10,8 @@
 	</head>
 	<body>
 		<div id="showcase">
-			<header>
-				<a class="name" href="charity.html">Mars <br/>Foundation</a>
+			<header id="navbar">
+				<a class="name" href="charity.html"><img src = "images/unity-lines white.png"/></a>
 				<button  class="menubtn">
 					<div class="bar1"></div>
 					<div class="bar2"></div>
@@ -38,20 +38,21 @@
 				</a>
 			</header>
 			
+			<div class="divider"></div>
+			
 			<div class="story">
 				<article id="volunteer" class="floating">
-						<div class="divider"></div>
 						<h1>We Love Our Volunteers!</h1>
 						<br/>
 						<h2>Join our global community of volunteers.</h2>
-						<div class="divider"></div>
+						<div class="spacer"></div>
 						<a>
 							<button  onclick="drop('volunteer')" class="learn">Join Us</button>
 						</a>
 						<div class="divider"></div>
 						<div class="overlay">
 							<section class="floating">
-								<h1>Volunteer In Your Location.</h1>
+								<h3>Volunteer In Your Location.</h3>
 								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt magni nam nisi quae vitae? Quod molestiae ipsa autem natus eum vel ducimus nulla harum voluptatem eligendi! Unde, reiciendis? Praesentium, laborum.</p>
 								<br/>
 								<h4>Michael</h4>
@@ -64,18 +65,17 @@
 				</article>
 				
 				<article id="donate">
-						<div class="divider"></div>
 						<h1>DONATE</h1>
 						<br/>
 						<h2>100% of your money goes to someone in need!</h2>
-						<div class="divider"></div>
+						<div class="spacer"></div>
 						<a>
-							<button  onclick="drop('donate')" class="learn">Join Us</button>
+							<button  onclick="drop('donate')" class="learn">More</button>
 						</a>
 						<div class="divider"></div>
 						<div class="overlay">
 							<section class="floating">
-								<h1>Whatever you give matters.</h1>
+								<h3>Whatever you give matters.</h3>
 								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt magni nam nisi quae vitae? Quod molestiae ipsa autem natus eum vel ducimus nulla harum voluptatem eligendi! Unde, reiciendis? Praesentium, laborum.</p>
 								<br/>
 								<h4>Kate Mumo</h4>
@@ -140,10 +140,6 @@
 			</article>
 			
 			<div class="divider"></div>
-			<article>
-				
-			</article>
-			<div class="divider"></div>
 			
 			<div id="give">
 				<a>
@@ -178,33 +174,11 @@
 			</div>
 			
 			<footer class="floating">
-				<ul id="sub-menu">
-					<li>
-						<a href="charitycontact.html#">Volunteer</a>
-					</li>
-					<li>
-						<a href = "charitycontact.html#" >Work With Us</a>
-					</li>
-					<li>
-						<a  onclick="give('give')" >Donate</a>
-					</li>
-				</ul>					
-				<ul>
-					<a href = "charity.html" >
-						<li>Home</li>
-					</a>
-					<a href = "charitywork.html" >
-						<li>Our Work</li>
-					</a>
-					<a href = "charityabout.html" >
-						<li>About Us</li>
-					</a>
-					<a href = "charitycontact.html" >
-						<li>Contact Us</li>
-					</a>
-				</ul>
-				<!--copyright,trademark and location-->
-				<p>Address  |  myemail@gmail.com  <br/> &copy 2019 Mars Foundation<p>
+				
+				<div id="trademark">
+					<h5>BUILDING A BETTER FUTURE</h5>
+					<p> &copy 2019 MARS FOUNDATION | ALL  RIGHTS RESERVED<p>
+				</div>
 			</footer>
 		</div>
 	</body>
@@ -245,4 +219,16 @@
 		else{document.getElementById(show).style.display="block";
 			 x++;}
 		}
+	
+	var prevScrollpos = window.pageYOffset;
+	window.onscroll = function() {
+		var currentScrollpos =	window.pageYOffset;
+		if (prevScrollpos >	currentScrollpos) {
+	document.getElementById("navbar").style.top = "0";
+	document.getElementById("navbar").style.background = "#1d1c1c";
+	} else{
+	document.getElementById("navbar").style.top = "-4.8em";
+	}
+	prevScrollpos = currentScrollpos;
+	}
 </script>

@@ -11,8 +11,8 @@
 	<body>
 		<div id="showcase">
 			<div class="overlay">
-				<header>
-					<a class="name" href="charity.html">Mars <br/>Foundation</a>
+				<header id="navbar">
+				<a class="name" href="charity.html"><img src = "images/unity-lines white.png"/></a>
 					<button  class="menubtn">
 						<div class="bar1"></div>
 						<div class="bar2"></div>
@@ -58,17 +58,23 @@
 					<br/>
 					<h2>WHO WE ARE</h2>
 					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt magni nam nisi quae vitae? Quod molestiae ipsa
-					autem natus eum vel ducimus nulla harum voluptatem eligendi! Unde, reiciendis? Praesentium, laborum.
-					<br/>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt magni nam nisi quae vitae? Quod molestiae ipsa
-					autem natus eum vel ducimus nulla harum voluptatem eligendi! Unde, reiciendis? Praesentium, laborum.</p>
+					autem natus eum vel ducimus nulla harum voluptatem eligendi!
+					<a class="extend_more" onclick="drop('one')"> ...More</a>
+					</p>
+					<p class="extend" id="one"> Unde, reiciendis? Praesentium, laborum.This is just dummy text to fill the space.It does not do anything, it does not say anything.It just fills up space.This is just dummy text to fill the space.It does not do anything, it does not say anything.It just fills up space.
+					<a class="extend_more" onclick="drop('one')"> ...Less</a>
+					</p>
 				</section>
 				<section>
 					<br/>
 					<h2>HOW WE WORK</h2>
 					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt magni nam nisi quae vitae? Quod molestiae ipsa
-					autem natus eum vel ducimus nulla harum voluptatem eligendi! Unde, reiciendis? Praesentium, laborum.
-					<br/>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt magni nam nisi quae vitae? Quod molestiae ipsa
-					autem natus eum vel ducimus nulla harum voluptatem eligendi! Unde, reiciendis? Praesentium, laborum.</p>
+					autem natus eum vel ducimus nulla harum voluptatem eligendi!
+					<a class="extend_more" onclick="drop('two')"> ...More</a>
+					</p>
+					<p class="extend" id="two"> Unde, reiciendis? Praesentium, laborum.This is just dummy text to fill the space.It does not do anything, it does not say anything.It just fills up space.This is just dummy text to fill the space.It does not do anything, it does not say anything.It just fills up space.
+					<a class="extend_more" onclick="drop('two')"> ...Less</a>
+					</p>
 				</section>
 			</article>
 			
@@ -77,7 +83,6 @@
 			<article class="story">
 				<section id="safeguards">
 					<div class="overlay">
-						<div class="divider"></div>
 						<a>
 							<button  onclick="drop('safeguards')" class="more">
 								Learn about
@@ -91,11 +96,6 @@
 							<aside>
 								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt magni nam nisi quae vitae? Quod molestiae ipsa
 								autem natus eum vel ducimus nulla harum voluptatem eligendi! Unde, reiciendis? Praesentium, laborum.
-								<br/>Quod molestiae ipsa
-								autem natus eum vel ducimus nulla harum voluptatem eligendi! Unde, reiciendis? Praesentium, laborum.</p>
-							</aside>
-							<aside>
-								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt magni nam nisi quae vitae? 
 								<br/>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt magni nam nisi quae vitae? Quod molestiae ipsa
 								autem natus eum vel ducimus nulla harum voluptatem eligendi! Unde, reiciendis? Praesentium, laborum.</p>
 							</aside>
@@ -104,7 +104,6 @@
 				</section>
 				<section id="financials">
 					<div class="overlay">
-						<div class="divider"></div>
 						<a>
 							<button  onclick="drop('financials')" class="more">
 								Learn about
@@ -118,11 +117,6 @@
 							<aside>
 								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt magni nam nisi quae vitae? Quod molestiae ipsa
 								autem natus eum vel ducimus nulla harum voluptatem eligendi! Unde, reiciendis? Praesentium, laborum.
-								<br/>Quod molestiae ipsa
-								autem natus eum vel ducimus nulla harum voluptatem eligendi! Unde, reiciendis? Praesentium, laborum.</p>
-							</aside>
-							<aside>
-								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt magni nam nisi quae vitae? 
 								<br/>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt magni nam nisi quae vitae? Quod molestiae ipsa
 								autem natus eum vel ducimus nulla harum voluptatem eligendi! Unde, reiciendis? Praesentium, laborum.</p>
 							</aside>
@@ -131,7 +125,6 @@
 				</section>
 				<section id="history">
 					<div class="overlay">
-						<div class="divider"></div>
 						<a>
 							<button  onclick="drop('history')" class="more">
 								Learn about
@@ -145,11 +138,6 @@
 							<aside>
 								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt magni nam nisi quae vitae? Quod molestiae ipsa
 								autem natus eum vel ducimus nulla harum voluptatem eligendi! Unde, reiciendis? Praesentium, laborum.
-								<br/>Quod molestiae ipsa
-								autem natus eum vel ducimus nulla harum voluptatem eligendi! Unde, reiciendis? Praesentium, laborum.</p>
-							</aside>
-							<aside>
-								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt magni nam nisi quae vitae? 
 								<br/>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt magni nam nisi quae vitae? Quod molestiae ipsa
 								autem natus eum vel ducimus nulla harum voluptatem eligendi! Unde, reiciendis? Praesentium, laborum.</p>
 							</aside>
@@ -236,45 +224,47 @@
 				<a  onclick="give('give')" >Donate</a>
 			</li>
 		</ul>
-			<!--links to social media-->
-		<div id = "social">
-			<a href="https://m.facebook.com/home.php?">
-				<button>
-					<img src = "images/facebook-2.png"/>
-				</button>
-			</a>
-			<a href="https://www.twitter.com/">
-				<button>
-					<img src = "images/twitter-2.png"/>
-				</button>
-			</a>
-			<a href="https://www.instagram.com">
-				<button>
-					<img src = "images/instagram-2.png"/>
-				</button>
-			</a>
-			<a href="https://www.youtube.com">
-				<button>
-					<img src = "images/youtube-2.png"/>
-				</button>
-			</a>
-		</div>
+		
+			<div id = "social">
+				<a href="https://m.facebook.com/home.php?">
+					<button>
+						<img src = "images/facebook-gray.png"/>
+					</button>
+				</a>
+				<a href="https://www.twitter.com/">
+					<button>
+						<img src = "images/twitter-gray.png"/>
+					</button>
+				</a>
+				<a href="https://www.instagram.com">
+					<button>
+						<img src = "images/instagram-gray.png"/>
+					</button>
+				</a>
+				<a href="https://www.youtube.com">
+					<button>
+						<img src = "images/youtube-gray circle.png"/>
+					</button>
+				</a>
+			</div>
 		<ul>
 			<a class="link" href = "charity.html" >
 				<li>Home</li>
 			</a>
 			<a class="link" href = "charitywork.html" >
-				<li>Our Work</li>
+				<li>Work</li>
 			</a>
 			<a class="link" href = "charityabout.html" >
-				<li>About Us</li>
+				<li>About</li>
 			</a>
 			<a class="link" href = "charitycontact.html" >
-				<li>Contact Us</li>
+				<li>Contact</li>
 			</a>
 		</ul>
-		<!--copyright,trademark and location-->
-		<p>Address  |  myemail@gmail.com  <br/> &copy 2019 Mars Foundation<p>
+		<div id="trademark">
+			<h5>BUILDING A BETTER FUTURE</h5>
+			<p> &copy 2019 MARS FOUNDATION | ALL  RIGHTS RESERVED<p>
+		</div>
 	</footer>
 </html>
 <script>
@@ -298,7 +288,7 @@
 			document.getElementById(name).style.height="50%";
 			i=0;
 			}
-		else{document.getElementById(name).style.height="99%";
+		else{document.getElementById(name).style.height="90%";
 			 i++;}
 		}
 	
@@ -312,4 +302,16 @@
 		else{document.getElementById(show).style.display="block";
 			 x++;}
 		}
+	
+	var prevScrollpos = window.pageYOffset;
+	window.onscroll = function() {
+		var currentScrollpos =	window.pageYOffset;
+		if (prevScrollpos >	currentScrollpos) {
+	document.getElementById("navbar").style.top = "0";
+	document.getElementById("navbar").style.background = "#1d1c1c";
+	} else{
+	document.getElementById("navbar").style.top = "-4.8em";
+	}
+	prevScrollpos = currentScrollpos;
+	}
 </script>
